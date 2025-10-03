@@ -1,0 +1,13 @@
+nav {
+    background-color: darkolivegreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body {
+    margin: 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
