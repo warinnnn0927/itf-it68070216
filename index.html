@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css"
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
@@ -12,17 +12,89 @@
         <h2>ITF Website</h2>
         <p>Week 14</p>
     </nav>
-    <div>
-        <img scr="images/panda.png">
-        <h2>ITF Simple Bank</h2>
-        <p>Welcome to my fist HTML + CSS + JS website!</p>
+    <div class="addimg">
+        <img src="images/panda.png" style="width:150px; height:auto;">
+        <div>
+            <h2 id="my-title">ITF Simple Bank</h2>
+            <p>Welcome to my fist HTML + CSS + JS website!</p>
+        </div>
     </div>
+    <hr>
+    <h2 style="padding: 0 16px;">Transaction History</h2>
+    <textarea id="history" readonly></textarea>
     <div class="container">
         <div>
             <h2>Account Overview</h2>
         </div>
         <div>
             <h2>Financial Tools</h2>
+        </div>
+    </div>
+    <div class="function">
+        <div>
+            <div class="addimg">
+                <img src="images/user.png" class="icon">
+                <div>
+                    <h2>Account Information</h2>
+                    <p>Name: Kanyanat Raksamai</p>
+                    <p>Type: Saving Account</p>
+                </div>
+            </div>
+            <br>
+            <div class="addimg">
+                <img src="images/briefcase.png" class="icon">
+                <div>
+                    <h2>Balance Information</h2>
+                    <label for="account">Current account balance:</label>
+                    <input type="number" id="accountBalance" value="1000" disabled>
+                    <br>
+                    <br>
+                    <label for="cash">Current cash balance:</label>
+                    <input type="number" id="cashBalance" value="1000" disabled>
+                    <br>
+                    <br>
+                    <button onclick="updateBalance()">Update Balance</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="addimg">
+                <img src="images/credit_card.png" class="icon">
+                <div>
+                    <h2>Bank Operation</h2>
+                    <select id = "operationType">
+                        <option value="deposit">Deposit</option>
+                        <option value="withdraw">Withdraw</option> 
+                    </select>
+                    <input type="number" id="operationAmount" placeholder="Enter amount">
+                    <br>
+                    <br>
+                    <button onclick="bankOperation()">Proceed</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div>
+            <div class="addimg">
+                <img src="images/coins.png" class="icon">
+                <div>
+                    <h2>Currency Converter</h2>
+                    <input type="number" placeholder="Input balance">
+                    <br>
+                    <label>Input currency:</label>
+                    <select id="inputCurrency">
+                        <option value="USD">USD</option>
+                        <option value="THB">THB</option>
+                    </select>
+                    <br>
+                    <input type="number" placeholder="Output balance" rea>
+                    <br>
+                    <button onclick="convertCurrency()">Convert</button>
+                </div>
+            </div>
+            <p>**this feature still not working**</p>
         </div>
     </div>
     <script src="script.js"></script>
